@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>数据管理库 · 本地工作空间</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<aside>
+  <a class="brand" href="/"><span class="mark">▦</span><span>数据管理库<small>DATA LIBRARY</small></span></a>
+  <div class="aside-label">工作空间 <button id="newFolder" title="在当前目录下新建目录">＋</button></div>
+  <nav id="folders" aria-label="目录树"></nav>
+  <div class="local"><span class="dot"></span> 本地存储<small>你的文件，留在你的电脑。</small></div>
+</aside>
+<main>
+  <header><span>我的资料工作台</span><span class="badge">LOCAL WORKSPACE</span></header>
+  <section class="intro"><div><p class="eyebrow">ORGANIZE · EXPLORE · CONNECT</p><h1>让每一份资料，各归其位。</h1><p>按项目组织数据、演示文稿与图片，让灵感与成果有迹可循。</p></div><div class="hero-icon">▤</div></section>
+  <section class="stats" id="stats" aria-label="资料统计"></section>
+  <section class="library">
+    <div class="section-head"><div><h2 id="title">全部文件</h2><p id="crumb">工作空间中的所有资料</p></div><div class="actions"><button id="removeFolder" hidden>删除空目录</button><button class="primary" id="uploadButton">＋ 上传文件</button><input id="upload" type="file" multiple hidden></div></div>
+    <div class="toolbar"><div class="tabs" id="tabs"><button data-type="all" class="active">全部</button><button data-type="data">数据</button><button data-type="ppt">PPT</button><button data-type="image">图片</button><button data-type="other">其他</button></div><input type="search" id="search" placeholder="搜索文件名称或标签…" aria-label="搜索文件"></div>
+    <div id="dropzone"><div class="table-head"><span>文件名称</span><span>所属目录</span><span>大小 / 时间</span><span>操作</span></div><div id="files"></div></div>
+    <footer>支持拖入多个文件 · 单个文件最大 50 MB <span id="count"></span></footer>
+  </section>
+  <p class="hint">PPTX 支持逐页文字查看；CSV / TSV 支持表格预览。其他格式可保存并下载。</p>
+</main>
+<dialog id="modal"><div class="modal-head"><h2 id="modalTitle"></h2><button id="closeModal" aria-label="关闭">✕</button></div><div id="preview"></div></dialog>
+<div id="status" role="status" hidden></div><script src="/app.js"></script>
+</body></html>
